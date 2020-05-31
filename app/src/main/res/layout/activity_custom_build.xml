@@ -107,24 +107,14 @@
 
         <TextView
             android:id="@+id/textView13"
-            android:layout_width="38dp"
-            android:layout_height="16dp"
+            android:layout_width="82dp"
+            android:layout_height="14dp"
             android:layout_marginTop="8dp"
-            android:text="Pull Up"
+            android:text="1 Leg DB Squat"
             app:autoSizeTextType="uniform"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toBottomOf="@+id/imageView14" />
-
-        <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toBottomOf="@+id/textView11"
-            app:srcCompat="@drawable/inclineDBpress" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
         <TextView
             android:id="@+id/textView15"
@@ -162,6 +152,16 @@
             app:layout_constraintStart_toStartOf="@+id/guideline3"
             app:layout_constraintTop_toBottomOf="@+id/textView13"
             app:srcCompat="@drawable/shoulder2" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/textView11"
+            app:srcCompat="@drawable/onelegdbsquat" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

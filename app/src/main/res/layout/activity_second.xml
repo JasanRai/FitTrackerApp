@@ -42,12 +42,12 @@
             android:layout_height="150dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:contentDescription="@string/todo"
+            android:contentDescription="@string/front_cardio"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toTopOf="@+id/imageButton5"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/cardio" />
+            app:srcCompat="@drawable/cardi" />
 
         <TextView
             android:id="@+id/textView2"
@@ -67,7 +67,7 @@
             android:id="@+id/imageButton5"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:contentDescription="@string/todo"
+            android:contentDescription="@string/front_shred"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
