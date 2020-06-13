@@ -24,25 +24,25 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="112dp"
+        android:layout_width="144dp"
         android:layout_height="41dp"
         android:layout_marginTop="16dp"
         android:text="@string/programs"
         app:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="28dp"
         android:contentDescription="@string/C_pop"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:srcCompat="@drawable/cardi" />
@@ -51,11 +51,12 @@
         android:id="@+id/imageButton2"
         android:layout_width="0dp"
         android:layout_height="150dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="28dp"
         android:contentDescription="@string/shred_pop"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:srcCompat="@drawable/shred" />
@@ -65,11 +66,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="160dp" />
+        app:layout_constraintGuide_begin="150dp" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="53dp"
+        android:layout_width="wrap_content"
         android:layout_height="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/cardio"
@@ -89,13 +90,13 @@
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/bulk_pop"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         app:srcCompat="@drawable/bulking" />
@@ -104,18 +105,18 @@
         android:id="@+id/imageButton6"
         android:layout_width="0dp"
         android:layout_height="150dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="32dp"
         android:contentDescription="@string/cali_pop"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:srcCompat="@drawable/calisthenics" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="55dp"
+        android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_marginTop="16dp"
         android:text="@string/bulking"

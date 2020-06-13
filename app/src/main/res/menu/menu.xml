@@ -2,8 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+    <item
+        android:id="@+id/program"
+        android:title="Program" />
+    <item
+        android:id="@+id/buildyourown"
+        android:title="Build Your Own" />
+    <item
+        android:id="@+id/info"
+        android:title="Information" />
 </menu>

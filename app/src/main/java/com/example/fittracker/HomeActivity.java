@@ -8,13 +8,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class ProgramActivity extends  AppCompatActivity {
+public class HomeActivity extends  AppCompatActivity{
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_program);
+        setContentView(R.layout.activity_second);
     }
 
     @Override
@@ -30,29 +31,28 @@ public class ProgramActivity extends  AppCompatActivity {
         int id = menuItem.getItemId();
         if(id == R.id.home)
         {
-            Intent intent = new Intent(ProgramActivity.this, HomeActivity.class);
+            Intent intent = new Intent(HomeActivity.this, HomeActivity.class);
             startActivity(intent);
             return true;
         }
         else if(id == R.id.program)
         {
-            Intent intent = new Intent(ProgramActivity.this, ProgramActivity.class);
+            Intent intent = new Intent(HomeActivity.this, ProgramActivity.class);
             startActivity(intent);
             return true;
         }
         else if(id == R.id.buildyourown)
         {
-            Intent intent = new Intent(ProgramActivity.this, CustomBuildActivity.class);
+            Intent intent = new Intent(HomeActivity.this, CustomBuildActivity.class);
             startActivity(intent);
             return true;
         }
         else if(id == R.id.info)
         {
-            Intent intent = new Intent(ProgramActivity.this, InfoActivity.class);
+            Intent intent = new Intent(HomeActivity.this, InfoActivity.class);
             startActivity(intent);
             return true;
         }
         return super.onOptionsItemSelected(menuItem);
     }
-
 }
