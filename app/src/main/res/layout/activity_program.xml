@@ -20,7 +20,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+        app:layout_constraintTop_toBottomOf="@+id/caliButton" />
 
     <TextView
         android:id="@+id/textView4"
@@ -35,8 +35,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="150dp"
+        android:id="@+id/cardioButton"
+        android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginTop="28dp"
         android:contentDescription="@string/C_pop"
@@ -48,7 +48,7 @@
         app:srcCompat="@drawable/cardi" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/shredButton"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginStart="12dp"
@@ -66,7 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="150dp" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <TextView
         android:id="@+id/textView5"
@@ -76,7 +76,7 @@
         android:text="@string/cardio"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/cardioButton" />
 
     <TextView
         android:id="@+id/textView6"
@@ -86,11 +86,11 @@
         android:text="@string/shredding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        app:layout_constraintTop_toBottomOf="@+id/shredButton" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="150dp"
+        android:id="@+id/bulkButton"
+        android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginTop="32dp"
         android:contentDescription="@string/bulk_pop"
@@ -102,7 +102,7 @@
         app:srcCompat="@drawable/bulking" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/caliButton"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginStart="12dp"
@@ -124,7 +124,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/bulkButton"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

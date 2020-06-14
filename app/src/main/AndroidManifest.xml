@@ -9,10 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".InfoActivity"></activity>
-        <activity android:name=".CustomBuildActivity"></activity>
-        <activity android:name=".ProgramActivity"></activity>
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".BuildYourOwnActivity"></activity>
+        <activity android:name=".CaliActivity" />
+        <activity android:name=".BulkActivity" />
+        <activity android:name=".CardioActivity" />
+        <activity android:name=".ShredActivity" />
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".CustomBuildActivity" />
+        <activity android:name=".ProgramActivity" />
+        <activity android:name=".HomeActivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
