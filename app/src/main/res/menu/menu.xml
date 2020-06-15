@@ -11,7 +11,5 @@
     <item
         android:id="@+id/buildyourown"
         android:title="Build Your Own" />
-    <item
-        android:id="@+id/info"
-        android:title="Information" />
+
 </menu>

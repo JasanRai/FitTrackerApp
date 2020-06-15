@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="#31727A">
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
@@ -12,24 +13,38 @@
         tools:context=".HomeActivity"
         tools:ignore="ContentDescription">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="2" />
+
         <TextView
             android:id="@+id/textView3"
             android:layout_width="0dp"
             android:layout_height="150dp"
             android:layout_marginStart="8dp"
+            android:layout_marginBottom="64dp"
             android:text="@string/ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_do_eiusmod_tempor_incididunt_ut_labore_et_dolore_magna_aliqua"
+            app:autoSizeTextType="uniform"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_height="74dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/aclonica1"
             android:text="@string/popular_workouts"
+            android:textColor="#68C1D1"
             app:autoSizeTextType="uniform"
-            app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+            app:layout_constraintBottom_toTopOf="@+id/popCardioBtn"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintHorizontal_bias="0.592"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,14 +52,15 @@
             app:layout_constraintVertical_bias="0.807" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/popCardioBtn"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="60dp"
             android:contentDescription="@string/front_cardio"
             android:scaleType="fitXY"
-            app:layout_constraintBottom_toTopOf="@+id/imageButton5"
+            app:layout_constraintBottom_toTopOf="@+id/popShredBtn"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/cardi" />
@@ -52,21 +68,26 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="149dp"
             android:layout_marginStart="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="60dp"
+            android:fontFamily="@font/average"
             android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_do_eiusmod_tempor_incididunt_ut_labore_et_dolore_magna_aliqua"
+            app:autoSizeTextType="uniform"
             app:layout_constraintBottom_toTopOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.716" />
 
         <ImageButton
-            android:id="@+id/imageButton5"
+            android:id="@+id/popShredBtn"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
             android:contentDescription="@string/front_shred"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -80,7 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.4" />
+            app:layout_constraintGuide_percent="0.5" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,9 +14,12 @@
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="255dp"
-            android:layout_height="268dp"
+            android:layout_width="0dp"
+            android:layout_height="578dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerInside"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -24,11 +27,14 @@
 
         <TextView
             android:id="@+id/textView18"
-            android:layout_width="278dp"
-            android:layout_height="114dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
             android:fontFamily="sans-serif-condensed"
             android:text="This workout is a 5 days body building workout plan for a week for people aiming for mass gain. Usage of heavy weight is required for maximum output and result. As body building requires alot of energy, the number of exercise are limited a day but requires maximum strength and resting period."
+            app:autoSizeTextType="uniform"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,13 +42,14 @@
 
         <EditText
             android:id="@+id/editTextTextPersonName2"
-            android:layout_width="94dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="156dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
             android:fontFamily="sans-serif-condensed"
             android:inputType="textPersonName"
             android:text="Instructions"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView7" />

@@ -14,8 +14,6 @@
         <activity android:name=".BulkActivity" />
         <activity android:name=".CardioActivity" />
         <activity android:name=".ShredActivity" />
-        <activity android:name=".InfoActivity" />
-        <activity android:name=".CustomBuildActivity" />
         <activity android:name=".ProgramActivity" />
         <activity android:name=".HomeActivity" />
         <activity
@@ -27,6 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

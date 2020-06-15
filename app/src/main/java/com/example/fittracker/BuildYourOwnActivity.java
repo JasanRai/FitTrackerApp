@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import android.widget.ArrayAdapter;
@@ -27,6 +29,10 @@ public class BuildYourOwnActivity extends AppCompatActivity {
     EditText enterName;
     ListView listProgram;
 
+    ArrayAdapter programArrayAdapter;
+    Database database;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +49,8 @@ public class BuildYourOwnActivity extends AppCompatActivity {
         enterName =findViewById(R.id.enterName);
         listProgram = findViewById(R.id.programList);
 
+        database = new Database(BuildYourOwnActivity.this);
+        ShowCustomProgramList(database);
 
 
         addProgram.setOnClickListener(new View.OnClickListener()
@@ -54,10 +62,7 @@ public class BuildYourOwnActivity extends AppCompatActivity {
 
                 String s = "";
 
-              /*  if(enterName.getFreezesText())
-                {
-                    s += "\n ";
-                }*/
+
                 if(barbellCurlCB.isChecked())
                 {
                     s += "\n Barbell Curl";
@@ -83,29 +88,27 @@ public class BuildYourOwnActivity extends AppCompatActivity {
                     s += "\n Sumo Deadlift";
                 }
                /* customOutput.setText(s);*/
-                Program program;
-
+                Program program = new Program();
+                    program.setProgramName(s);
                 try{
-                     program = new Program(enterName.getText().toString(), -1);
+                     program = new Program(enterName.getText().toString(), -1, s);
                     Toast.makeText(BuildYourOwnActivity.this, program.toString(), Toast.LENGTH_SHORT).show();
                 }
                 catch(Exception e)
                 {
                     Toast.makeText(BuildYourOwnActivity.this, "Error Creating Program", Toast.LENGTH_SHORT).show();
-                    program = new Program("error", -1);
+                     program = new Program("error", -1, "error");
                 }
 
 
-                Database database = new Database(BuildYourOwnActivity.this);
-                ArrayAdapter programArrayAdapter = new ArrayAdapter<Program>(BuildYourOwnActivity.this, android.R.layout.simple_list_item_1, database.getAllProgram());
-                listProgram.setAdapter(programArrayAdapter);
+                database = new Database(BuildYourOwnActivity.this);
 
-                String nameValue = enterName.getText().toString();
-                Intent intent = new Intent(BuildYourOwnActivity.this, CustomBuildActivity.class);
-                intent.putExtra("NAME", nameValue);
-                startActivity(intent);
 
-;                boolean success = database.addOne(program);
+                ShowCustomProgramList(database);
+
+                boolean success = database.addOne(program);
+
+;
 
 
 
@@ -115,5 +118,43 @@ public class BuildYourOwnActivity extends AppCompatActivity {
 
 
 
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        getMenuInflater().inflate(R.menu.menu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem)
+    {
+        int id = menuItem.getItemId();
+        if(id == R.id.home)
+        {
+            Intent intent = new Intent(BuildYourOwnActivity.this, HomeActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        else if(id == R.id.program)
+        {
+            Intent intent = new Intent(BuildYourOwnActivity.this, ProgramActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        else if(id == R.id.buildyourown)
+        {
+            Intent intent = new Intent(BuildYourOwnActivity.this, BuildYourOwnActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(menuItem);
+    }
+
+    private void ShowCustomProgramList(Database databases) {
+
+        programArrayAdapter = new ArrayAdapter<Program>(BuildYourOwnActivity.this, android.R.layout.simple_list_item_1, databases.getAllProgram());
+        listProgram.setAdapter(programArrayAdapter);
     }
 }

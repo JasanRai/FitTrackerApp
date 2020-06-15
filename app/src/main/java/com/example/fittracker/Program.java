@@ -4,11 +4,13 @@ public class Program {
 
     private String name;
     private int id;
+    private String programName;
 
 
-    public Program(String name, int id) {
+    public Program(String name, int id, String programName) {
         this.name = name;
         this.id = id;
+        this.programName = programName;
 
     }
 
@@ -17,8 +19,10 @@ public class Program {
         return "Program{" +
                 "name='" + name + '\'' +
                 ", id=" + id +
+                ", programName='" + programName + '\'' +
                 '}';
     }
+
 
     public String getName() {
         return name;
@@ -36,7 +40,13 @@ public class Program {
         this.id = id;
     }
 
+    public String getProgramName() {
+        return programName;
+    }
 
+    public void setProgramName(String programName) {
+        this.programName = programName;
+    }
 
     public Program()
     {

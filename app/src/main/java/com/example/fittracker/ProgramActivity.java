@@ -13,7 +13,7 @@ import android.widget.ImageButton;
 
 public class ProgramActivity extends  AppCompatActivity {
 
-ImageButton shredButton;
+ImageButton shredButton, cardioButton, caliButton, bulkButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +21,42 @@ ImageButton shredButton;
         setContentView(R.layout.activity_program);
 
         shredButton = findViewById(R.id.shredButton);
+        cardioButton = findViewById(R.id.cardioButton);
+        caliButton = findViewById(R.id.caliButton);
+        bulkButton = findViewById(R.id.bulkButton);
+
+
         shredButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent shredActivityIntent = new Intent(v.getContext(), ShredActivity.class);
-
                 startActivity(shredActivityIntent);
+
+            }
+        });
+        cardioButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cardioActivityIntent = new Intent(v.getContext(), CardioActivity.class);
+                startActivity(cardioActivityIntent);
+
+            }
+        });
+        caliButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent caliActivityIntent = new Intent(v.getContext(), CaliActivity.class);
+                startActivity(caliActivityIntent);
+
+            }
+        });
+
+        bulkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent bulkActivityIntent = new Intent(v.getContext(),  BulkActivity.class);
+                startActivity(bulkActivityIntent);
+
             }
         });
     }
@@ -56,16 +86,11 @@ ImageButton shredButton;
         }
         else if(id == R.id.buildyourown)
         {
-            Intent intent = new Intent(ProgramActivity.this, CustomBuildActivity.class);
+            Intent intent = new Intent(ProgramActivity.this, BuildYourOwnActivity.class);
             startActivity(intent);
             return true;
         }
-        else if(id == R.id.info)
-        {
-            Intent intent = new Intent(ProgramActivity.this, InfoActivity.class);
-            startActivity(intent);
-            return true;
-        }
+
         return super.onOptionsItemSelected(menuItem);
     }
 
